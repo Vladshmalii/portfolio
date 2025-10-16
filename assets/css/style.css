@@ -813,7 +813,8 @@ main {
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
-  line-height: 1.6;
+  line-height: 1.8;
+  white-space: pre-line;
 }
 
 
@@ -840,9 +841,21 @@ main {
   transform: translateY(-2px);
 }
 
+.skill-badge {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+}
+
 .skill-badge.primary {
-  background: rgba(var(--orange-yellow-crayola), 0.15);
-  color: var(--orange-yellow-crayola);
+  background: rgba(255, 171, 0, 0.15);
+  color: hsl(45, 100%, 72%);
 }
 
 .skill-badge.secondary {
@@ -880,8 +893,55 @@ main {
   color: #FF5630;
 }
 
-.skills-list {
-  padding: 20px;
+.skill-badge.purple {
+  background: rgba(156, 39, 176, 0.15);
+  color: #9C27B0;
+}
+
+.skill-badge.pink {
+  background: rgba(233, 30, 99, 0.15);
+  color: #E91E63;
+}
+
+.skill-badge.teal {
+  background: rgba(0, 150, 136, 0.15);
+  color: #009688;
+}
+
+.skill-badge.indigo {
+  background: rgba(63, 81, 181, 0.15);
+  color: #3F51B5;
+}
+
+.skill-badge.cyan {
+  background: rgba(0, 188, 212, 0.15);
+  color: #00BCD4;
+}
+
+.skill-badge.lime {
+  background: rgba(205, 220, 57, 0.15);
+  color: #CDDC39;
+}
+
+.skill-badge.amber {
+  background: rgba(255, 193, 7, 0.15);
+  color: #FFC107;
+}
+
+.skill-badge.deep-orange {
+  background: rgba(255, 87, 34, 0.15);
+  color: #FF5722;
+}
+
+.skill-badge-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+.skills-title {
+  padding-bottom: 20px;
 }
 
 .skills-list .skills-item {
@@ -898,6 +958,187 @@ main {
   padding-bottom: 0;
 }
 
+.skills-list .skills-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 0;
+}
+
+.skills-list .skills-item:first-child {
+  padding-top: 0;
+}
+
+.skills-list .skills-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+
+/* Quote Section */
+.quote-section {
+  margin-bottom: 30px;
+}
+
+.quote-card {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px 25px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+.quote-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  opacity: 0.2;
+}
+
+.quote-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(55%) saturate(490%) hue-rotate(3deg) brightness(103%) contrast(101%);
+}
+
+.quote-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 45px;
+  position: relative;
+}
+
+
+
+.quote-author {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  position: relative;
+  cursor: help;
+  transition: color var(--transition-1);
+  opacity:70%;
+}
+
+.quote-author ion-icon {
+  font-size: 16px;
+  color: var(--light-gray-70);
+  transition: color var(--transition-1);
+}
+
+.quote-author:hover ion-icon {
+  color: var(--orange-yellow-crayola);
+}
+
+.quote-author:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.quote-author:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+/* Tooltip */
+.quote-author::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: var(--eerie-black-1);
+  color: var(--white-2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  white-space: normal;
+  width: 250px;
+  text-align: left;
+  box-shadow: var(--shadow-3);
+  border: 1px solid var(--jet);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.quote-author::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 20px;
+  border: 6px solid transparent;
+  border-top-color: var(--eerie-black-1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-1);
+  z-index: 10;
+}
+
+.quote-author:hover::after,
+.quote-author:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+
+@media (max-width: 580px) {
+  .quote-author::after {
+    right: auto;
+    left: 0;
+    width: 200px;
+  }
+
+  .quote-author::before {
+    right: auto;
+    left: 20px;
+  }
+}
+
+
+
+@media (min-width: 580px) {
+  .quote-card {
+    padding: 25px 30px;
+  }
+
+  .quote-icon {
+    top: 20px;
+    left: 25px;
+  }
+
+  .quote-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .quote-text {
+    font-size: var(--fs-5);
+  }
+
+  .quote-author {
+    font-size: var(--fs-7);
+  }
+}
 
 /*-----------------------------------*\
   #PORTFOLIO
