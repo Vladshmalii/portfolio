@@ -519,3 +519,25 @@ window.addEventListener('load', function() {
     }
   }, 2200);
 });
+
+const emailLink = document.querySelector('.contact-info a[href^="mailto"]');
+if (emailLink) {
+  emailLink.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    pages.forEach(page => {
+      page.classList.toggle('active', page.dataset.page === 'contact');
+    });
+
+    navigationLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.page === 'contact');
+    });
+
+    setTimeout(() => {
+      const form = document.querySelector('.contact-form');
+      if (form) {
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  });
+}
