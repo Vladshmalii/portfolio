@@ -135,7 +135,7 @@ const translations = {
     navPortfolio: "Portfolio",
     navContact: "Contact",
     aboutTitle: "About me",
-    aboutText1: "Backend Developer with 2+ years of experience building scalable Python applications. Working on projects ranging from small startups to systems handling thousands of daily users. Specialized in high-performance APIs, microservices architecture, and AI integrations.",
+    aboutText1: "Backend Developer with 3+ years of experience building scalable Python applications. Working on projects ranging from small startups to systems handling thousands of daily users. Specialized in high-performance APIs, microservices architecture, and AI integrations.",
 
     aboutText2: "Developed 50+ Telegram bots for business automation, several full-stack CRUD backends with REST API and authentication, large-scale services with microservices architecture. Built custom Web3 payment systems, integrated AI for support and analytics.",
 
@@ -177,7 +177,7 @@ const translations = {
     edu3Text: "Study of SQL, query optimization, relational database design, normalization.",
 
     exp1Title: "Backend Developer — Popeye Solution",
-    exp1Period: "01.2023 — Present",
+    exp1Period: "01.2023 — 08.2025",
     exp1Text:
         "Working as a Middle Backend Developer, involved in the full project cycle — from concept to production. " +
         "Projects vary in scale: from small ones (team of 3) where you need to move fast and handle everything yourself, " +
@@ -262,7 +262,7 @@ const translations = {
     navPortfolio: "Портфоліо",
     navContact: "Контакти",
     aboutTitle: "Про мене",
-    aboutText1: "Backend Developer з 2+ роками досвіду створення масштабованих Python-застосунків. Працюю з проєктами від невеликих стартапів до систем з тисячами щоденних користувачів. Спеціалізуюся на високопродуктивних API, мікросервісній архітектурі та AI-інтеграціях.",
+    aboutText1: "Backend Developer з 3+ роками досвіду створення масштабованих Python-застосунків. Працюю з проєктами від невеликих стартапів до систем з тисячами щоденних користувачів. Спеціалізуюся на високопродуктивних API, мікросервісній архітектурі та AI-інтеграціях.",
 
     aboutText2: "Розробив 50+ Telegram-ботів для автоматизації бізнес-процесів, кілька повноцінних CRUD-бекендів з REST API та аутентифікацією, великомасштабні сервіси з мікросервісною архітектурою. Створював власні платіжні системи на Web3, інтегрував AI для підтримки та аналітики.",
 
@@ -305,7 +305,7 @@ const translations = {
 
     // Experience
     exp1Title: "Backend Developer — Popeye Solution",
-    exp1Period: "01.2023 — Дотепер",
+    exp1Period: "01.2023 — 08.2025",
     exp1Text:
         "Працюю бекенд-розробником рівня Middle, беру участь у повному циклі — від ідеї до продакшену. " +
         "Проєкти бувають різного масштабу: від невеликих (команда 3 людини), де потрібно швидко приймати рішення та робити все самому, " +
